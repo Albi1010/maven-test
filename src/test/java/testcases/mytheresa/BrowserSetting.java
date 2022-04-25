@@ -18,6 +18,7 @@ public class BrowserSetting {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.get(BASE_URL);
+		options.setHeadless(true);
 		return driver;
 	}
 
