@@ -1,14 +1,9 @@
-package testcases.mytheresa;
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class WebdriverSettings {
-	
-	public WebDriver driverSettings() {
-		System.setProperty("webdriver.chrome.driver", "chromedriver");
-		WebDriver driver = new ChromeDriver();
-		return driver;
-	}
-
-}
+chrome_options = Options()
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-dev-shm-usage')
+d = webdriver.Chrome('chromedriver',chrome_options=chrome_options)
+d.get('https://www.google.nl/')
