@@ -8,8 +8,6 @@ public class WebdriverSettings {
 	public WebDriver driverSettings() {
 		System.setProperty("webdriver.chrome.driver", "chromedriver");
 		WebDriver driver = new ChromeDriver();
-    ChromeOptions chromeOptions = new ChromeOptions();
-    chromeOptions.setHeadless(true);
 		return driver;
 	}
 
